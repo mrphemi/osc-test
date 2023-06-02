@@ -14,7 +14,7 @@
 - GraphQL and graphQL-request for data fetching
 - Typescript
 
-### Todos
+### Todos (Couldn't implement some because of time constraint)
 
 - Better add to cart notifications.
 - Tracking and displaying number of items in cart on all pages.
