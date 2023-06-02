@@ -17,7 +17,7 @@ const Cart = () => {
   const [cartTotal, setCartTotal] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const deriveCartTotalString = (amount: string, currencyCode: string) => {
+  const setCartTotalString = (amount: string, currencyCode: string) => {
     return setCartTotal(`${amount} ${currencyCode}`);
   };
 
@@ -33,7 +33,7 @@ const Cart = () => {
     const currencyCode = cart.estimatedCost.totalAmount.currencyCode;
 
     setCartItems(cart.lines.edges);
-    deriveCartTotalString(amount, currencyCode);
+    setCartTotalString(amount, currencyCode);
     setLoading(false);
   };
 
@@ -54,7 +54,7 @@ const Cart = () => {
       cart.cartLinesUpdate.cart.estimatedCost.totalAmount.currencyCode;
 
     setCartItems(cart.cartLinesUpdate.cart.lines.edges);
-    deriveCartTotalString(amount, currencyCode);
+    setCartTotalString(amount, currencyCode);
   };
 
   const deleteItem = async (lineId: string) => {
@@ -65,7 +65,7 @@ const Cart = () => {
       cart.cartLinesRemove.cart.estimatedCost.totalAmount.currencyCode;
 
     setCartItems(cart.cartLinesRemove.cart.lines.edges);
-    deriveCartTotalString(amount, currencyCode);
+    setCartTotalString(amount, currencyCode);
   };
 
   const cartHasItems = cartItems.length > 0;

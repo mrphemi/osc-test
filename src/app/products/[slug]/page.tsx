@@ -8,7 +8,6 @@ export default async function ProductPage({
   params: { slug: string };
 }) {
   const { product } = await getProduct(params.slug);
-  // const outOfStock = product.availableForSale === 0;
 
   return (
     <>
