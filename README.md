@@ -1,5 +1,12 @@
 # Mini Basket
 
+- View product list
+- View single product
+- Change product quantity and add to cart.
+- View cart with items and subtotal
+- Update cart items (change quantity)
+- Delete item from cart
+
 ### Technologies Used
 
 - React with Next.js (new app router)
